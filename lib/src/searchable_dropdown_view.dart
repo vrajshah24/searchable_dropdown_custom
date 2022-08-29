@@ -135,7 +135,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
   Widget build(BuildContext context) {
     return SizedBox(
       key: controller.key,
-      width: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width-400,
       child: widget.backgroundDecoration != null
           ? widget.backgroundDecoration!(buildDropDown(context, controller))
           : buildDropDown(context, controller),
