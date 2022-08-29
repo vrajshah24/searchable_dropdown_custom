@@ -214,19 +214,23 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         if (reCalculatePosition != null && reCalculatePosition <= keyboardHeight) {
           reCalculatePosition = (keyboardHeight - reCalculatePosition) + reCalculatePosition;
         }
-        return Padding(
-          padding: EdgeInsets.only(
-              bottom: reCalculatePosition ?? 0,
-              left: MediaQuery.of(context).size.width /100*30,
-              right: MediaQuery.of(context).size.width/100*30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              SizedBox(
-                height: alertDialogMaxHeight,
-                child: _buildStatefullDropdownCard(context, controller, isReversed),
-              ),
-            ],
+        return Container(
+          width: 500,
+          child: Padding(
+            padding: EdgeInsets.only(
+                bottom: reCalculatePosition ?? 0,
+                // left: MediaQuery.of(context).size.width /100*30,
+                // right: MediaQuery.of(context).size.width/100*30
+                ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(
+                  height: alertDialogMaxHeight,
+                  child: _buildStatefullDropdownCard(context, controller, isReversed),
+                ),
+              ],
+            ),
           ),
         );
       },
