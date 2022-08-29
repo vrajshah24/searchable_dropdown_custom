@@ -156,18 +156,15 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         padding: widget.margin ?? EdgeInsets.all(MediaQuery.of(context).size.height * 0.015),
         child: Row(
           children: [
-            Container(
-              width: 600,
-              child: Row(
-                children: [
-              if (widget.leadingIcon != null)
-                Padding(
-                  padding: const EdgeInsets.only(right: 3.0),
-                  child: widget.leadingIcon!,
-                ),
-              dropDownText(controller),
-                ],
+            Row(
+              children: [
+            if (widget.leadingIcon != null)
+              Padding(
+                padding: const EdgeInsets.only(right: 3.0),
+                child: widget.leadingIcon!,
               ),
+            dropDownText(controller),
+              ],
             ),
             widget.trailingIcon ??
                 Icon(
