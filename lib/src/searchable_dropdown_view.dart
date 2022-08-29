@@ -240,22 +240,19 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     return Column(
       mainAxisAlignment: isReversed ? MainAxisAlignment.end : MainAxisAlignment.start,
       children: [
-        Container(
-          width: 600,
-          child: Card(
-            margin: EdgeInsets.zero,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(MediaQuery.of(context).size.height * 0.015))),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              verticalDirection: isReversed ? VerticalDirection.up : VerticalDirection.down,
-              children: [
-                buildSearchBar(context, controller),
-                Flexible(
-                  child: buildListView(controller, isReversed),
-                ),
-              ],
-            ),
+        Card(
+          margin: EdgeInsets.only(left: 150,right: 260),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(MediaQuery.of(context).size.height * 0.015))),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            verticalDirection: isReversed ? VerticalDirection.up : VerticalDirection.down,
+            children: [
+              buildSearchBar(context, controller),
+              Flexible(
+                child: buildListView(controller, isReversed),
+              ),
+            ],
           ),
         ),
       ],
