@@ -240,7 +240,8 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     return Column(
       mainAxisAlignment: isReversed ? MainAxisAlignment.end : MainAxisAlignment.start,
       children: [
-        Flexible(
+        Container(
+          width: 600,
           child: Card(
             margin: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
