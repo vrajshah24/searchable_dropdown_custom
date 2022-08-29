@@ -135,7 +135,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
   Widget build(BuildContext context) {
     return SizedBox(
       key: controller.key,
-      width: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width-500,
       child: widget.backgroundDecoration != null
           ? widget.backgroundDecoration!(buildDropDown(context, controller))
           : buildDropDown(context, controller),
@@ -158,17 +158,16 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
           children: [
             Container(
               width: 600,
-              child: Expanded(
-                  child: Row(
+              child: Row(
                 children: [
-                  if (widget.leadingIcon != null)
-                    Padding(
-                      padding: const EdgeInsets.only(right: 3.0),
-                      child: widget.leadingIcon!,
-                    ),
-                  Flexible(child: dropDownText(controller)),
+              if (widget.leadingIcon != null)
+                Padding(
+                  padding: const EdgeInsets.only(right: 3.0),
+                  child: widget.leadingIcon!,
+                ),
+              dropDownText(controller),
                 ],
-              )),
+              ),
             ),
             widget.trailingIcon ??
                 Icon(
