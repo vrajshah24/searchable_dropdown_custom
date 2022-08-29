@@ -218,8 +218,8 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         return Padding(
           padding: EdgeInsets.only(
               bottom: reCalculatePosition ?? 0,
-              left: MediaQuery.of(context).size.height * 0.02,
-              right: MediaQuery.of(context).size.height * 0.02),
+              left: MediaQuery.of(context).size.height * 0.2,
+              right: MediaQuery.of(context).size.height * 0.2),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
